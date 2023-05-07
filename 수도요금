@@ -1,0 +1,49 @@
+package sec03.exam02;
+
+import java.util.Scanner;
+
+public class homework {
+
+	public static void main(String[] args) {
+		static Scanner sc=new Scanner(System.in);
+		//다음 조건을 참고하여 수도요금을 계산하여 출력하시오.
+		//[사용량에 따른 톤당 요금단가]
+		//1 - 10 톤 : 170원
+		//11-19 톤 : 230원
+		//20-29 톤 : 330원
+		//30-39톤 : 480원
+		//그 이상  :  700원
+
+		//[하수도 요금] 
+		//사용량 * 350원
+
+		//[수도요금]
+		//수도사용 요금+하수도 요금
+	public static void main(String[] args) {
+		System.out.println("수도사용량을 입력하세요: ");
+		String water=sc.next();
+		
+		int a;//기본요금
+		int b;//하수도 요금
+		int c;//수도요금
+		
+		if(water<=10) {
+			a=(water*170);
+		}else if(water<=19) {
+			a=(170*10+(water-9)*230);
+		}else if(water<=29) {
+	   		a=(170*10+230*9+(water-19)*330);
+	    }else if(water<=39) {
+			a=(170*10+230*9+330*10+(water-29)*480);
+	    }else if{
+			a=(170*10+230*9+330*10+480*10+(water-39)*700); }
+		
+		b=a*350
+				c=(int)(a+b)
+				System.out.println("수도요금은"+c+"입니다.");
+				
+		
+		
+		}
+	}
+	
